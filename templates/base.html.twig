@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <ul>
+            <li><a href="{{ path('homepage') }}">Homepage</a></li>
+            <li><a href="{{ path('article_new') }}">Create article</a></li>
+
+            {% if app.user %}
+                <li><a href="{{ path('logout') }}">logout</a></li>
+            {% endif %}
+        </ul>
+
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
