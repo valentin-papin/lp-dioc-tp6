@@ -2,6 +2,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
+    limit: '%env(ARTICLES_ROWS)%'
 
 services:
     # default configuration for services in *this* file
@@ -30,7 +31,9 @@ services:
 
     view.article.handler:
         class: App\Article\ViewArticleHandler
+        arguments: ['@doctrine.orm.entity_manager']
 
-    article.fetcher:
+    App\Article\ArticleFetcher:
         class: App\Article\ArticleFetcher
-        parameters: ['@doctrine.orm.entity_manager']
+        arguments: ['@doctrine.orm.entity_manager', '%limit%']
+        autowire: false

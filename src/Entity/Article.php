@@ -53,12 +53,12 @@ class Article
     private $tags;
 
     /**
-     * @ORM\Column(type="date", name="updated_at")
+     * @ORM\Column(type="datetime", name="updated_at")
      */
     private $updatedAt;
 
     /**
-     * @ORM\Column(type="date", name="created_at")
+     * @ORM\Column(type="datetime", name="created_at")
      */
     private $createdAt;
 

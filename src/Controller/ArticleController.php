@@ -29,6 +29,7 @@ class ArticleController extends Controller
      */
     public function showAction(ViewArticleHandler $articleHandler)
     {
+        return $this->render("Article/show.html.twig", ["article" => $article]);
     }
 
     /**
