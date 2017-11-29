@@ -4,8 +4,11 @@
 /public/bundles/
 /var/
 /vendor/
+<<<<<<< HEAD
 *.idea
 composer.phar
+=======
+>>>>>>> 85f4c81e2efe910ae3c4510d1a309a037af2c84c
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
