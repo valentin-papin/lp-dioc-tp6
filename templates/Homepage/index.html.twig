@@ -1,7 +1,12 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Homepage{% endblock %}
+
 {% block body %}
+    <h4>Articles</h4>
     <ul>
-        <li><a href="#">Titre de l'article - 5</a></li>
+    {% for article in articles %}
+        <li><a href="#">{{ article.title }}</a></li>
+    {% endfor %}
     </ul>
 {% endblock %}
